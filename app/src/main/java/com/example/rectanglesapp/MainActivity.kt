@@ -120,10 +120,13 @@ private fun BottomButton(action : () -> Unit, text : String){
 }
 
 @Composable
-private fun Square(number: Int) {
+private fun Square(
+    number: Int,
+    modifier: Modifier = Modifier
+) {
     val col = if (number % 2 == 0) colorResource(R.color.red) else colorResource(R.color.blue)
     Box(
-        modifier = Modifier
+        modifier = modifier
             .aspectRatio(1f)
             .background(col)
     ) {
